@@ -4,14 +4,15 @@ on:
   push:
     branches: [ master ]
   pull_request:
+    branches:
 
 jobs:
   build:
-    name: Node v${{ matrix.node_version }} - ${{ matrix.os }}
+    name: Node v${{ matrix.node-version }} - ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node_version: [12.x, 14.x]
+        node-version: [12.x, 14.x]
         os: [ubuntu-latest]
 
     steps:
@@ -20,7 +21,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-        run: yarn
-      - name: Run lint script
-        run: yarn build
+    - run: yarn
+    - run: yarn build
