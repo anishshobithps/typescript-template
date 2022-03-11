@@ -6,7 +6,7 @@
   "repository": "git@github.com:Anish-Shobith/typescript-template.git",
   "author": "Anish Shobith P S <anish.shobith19@gmail.com>",
   "engines": {
-    "node": ">=12.0.0 || >=14.0.0",
+    "node": ">=16.14.0",
     "npm": "Please use yarn",
     "yarn": ">=1.22.0"
   },
